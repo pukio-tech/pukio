@@ -63,6 +63,9 @@ export const metadata: Metadata = {
       { url: "/logo.png", sizes: "180x180", type: "image/png" },
     ],
   },
+  other: {
+    "google-adsense-account": "ca-pub-5824072777833469",
+  },
 };
 
 export default function RootLayout({

@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-slate-dark: #070b14;
+  --color-slate-navy: #0f172a;
+  --color-slate-card: #131c35;
+  --color-slate-border: rgba(255, 255, 255, 0.08);
+  --color-electric-cyan: #06b6d4;
+  --color-cyan-glow: #22d3ee;
+  --color-cyan-light: #67e8f9;
+  --color-teal-accent: #14b8a6;
+  --color-emerald-accent: #10b981;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.dark body,
+html.dark body {
+  background-color: var(--color-slate-dark);
+  color: #f1f5f9;
+}
+
+/* Background dot grid pattern inspired by high-end engineering interfaces */
+.dot-lens {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  mask-image: radial-gradient(circle at 50% 30%, black 40%, transparent 80%);
+}
+
+.dark .dot-lens {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+}
+
+.hero-glow-1 {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: pulseGlow 8s ease-in-out infinite alternate;
+}
+
+.dark .hero-glow-1 {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+.hero-glow-2 {
+  position: absolute;
+  top: 35%;
+  right: 15%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.10) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(90px);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: pulseGlow 10s ease-in-out infinite alternate-reverse;
+}
+
+.dark .hero-glow-2 {
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.12) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.95) translate(0, 0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.1) translate(20px, -20px);
+    opacity: 1;
+  }
+}
+
+/* Orbit decorative animation */
+@keyframes orbitRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-orbit {
+  animation: orbitRing 25s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbitRing 35s linear infinite reverse;
+}
+
+/* Horizontal Infinite Marquee */
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft var(--speed, 35s) linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-track-reverse {
+  display: flex;
+  width: max-content;
+  animation: marqueeRight var(--speed, 40s) linear infinite;
+}
+
+.marquee-track-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Wave divider animations */
+@keyframes waveFlowA {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes waveFlowB {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-wave-a {
+  animation: waveFlowA 25s linear infinite;
+}
+
+.animate-wave-b {
+  animation: waveFlowB 35s linear infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #070b14;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #1e293b;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}

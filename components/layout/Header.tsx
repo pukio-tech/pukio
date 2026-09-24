@@ -61,7 +61,7 @@ export function Header({ onOpenBriefing }: HeaderProps) {
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-3">
           {/* Light / Dark Mode Toggle */}
-          {/* <ThemeToggle /> */}
+          <ThemeToggle />
 
           <Button
             variant="ghost"

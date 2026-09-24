@@ -16,32 +16,34 @@ export function Faq() {
     <section id="faq" className="relative py-28 bg-slate-50/80 dark:bg-[#090F1F]/70 border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          {/* Left Sticky Column */}
-          <div className="lg:col-span-5 flex flex-col items-start lg:sticky lg:top-28 lg:self-start">
-            <SectionHeader
-              eyebrow="Resolución de Dudas"
-              title={
-                <>
-                  Lo que nos preguntan{" "}
-                  <span className="text-cyan-600 dark:text-cyan-400">antes de empezar</span>
-                </>
-              }
-              lead="La claridad técnica y comercial es nuestra prioridad. Aquí respondemos las dudas más frecuentes sobre costos, metodología y garantías."
-            />
+          {/* Left Column: Stretches with grid to provide full scrolling track for sticky child */}
+          <div className="lg:col-span-5 relative">
+            <div className="lg:sticky lg:top-28 flex flex-col items-start">
+              <SectionHeader
+                eyebrow="Resolución de Dudas"
+                title={
+                  <>
+                    Lo que nos preguntan{" "}
+                    <span className="text-cyan-600 dark:text-cyan-400">antes de empezar</span>
+                  </>
+                }
+                lead="La claridad técnica y comercial es nuestra prioridad. Aquí respondemos las dudas más frecuentes sobre costos, metodología y garantías."
+              />
 
-            <div className="mt-8 p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800 shadow-sm w-full">
-              <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-2">
-                ¿Tienes una consulta específica o requerimiento a medida?
-              </h4>
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                Escríbenos directamente o inicia un briefing técnico y recibirás una respuesta de nuestros ingenieros en menos de 24 horas.
-              </p>
-              <a
-                href="#contacto"
-                className="text-xs font-mono text-cyan-600 hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300 font-semibold inline-flex items-center gap-1"
-              >
-                Escribir al equipo técnico &rarr;
-              </a>
+              <div className="mt-8 p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800 shadow-sm w-full">
+                <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-2">
+                  ¿Tienes una consulta específica o requerimiento a medida?
+                </h4>
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                  Escríbenos directamente o inicia un briefing técnico y recibirás una respuesta de nuestros ingenieros en menos de 24 horas.
+                </p>
+                <a
+                  href="#contacto"
+                  className="text-xs font-mono text-cyan-600 hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300 font-semibold inline-flex items-center gap-1"
+                >
+                  Escribir al equipo técnico &rarr;
+                </a>
+              </div>
             </div>
           </div>
 

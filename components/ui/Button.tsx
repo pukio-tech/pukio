@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowUpRight } from "lucide-react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "ghost" | "accent" | "whatsapp";
+  variant?: "primary" | "secondary" | "ghost" | "accent" | "whatsapp" | "outline";
   size?: "sm" | "md" | "lg";
   withArrow?: boolean;
   href?: string;
@@ -34,6 +34,8 @@ export function Button({
     secondary:
       "bg-slate-100 dark:bg-[#131c35] text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700/60 hover:bg-slate-200 dark:hover:bg-[#1a2544] hover:border-cyan-500/50 shadow-sm active:scale-[0.98]",
     ghost:
+      "bg-transparent text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white border border-slate-300 dark:border-slate-700/60 hover:border-cyan-500/50 hover:bg-slate-100/70 dark:hover:bg-white/[0.03] active:scale-[0.98]",
+    outline:
       "bg-transparent text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white border border-slate-300 dark:border-slate-700/60 hover:border-cyan-500/50 hover:bg-slate-100/70 dark:hover:bg-white/[0.03] active:scale-[0.98]",
     accent:
       "bg-cyan-50 dark:bg-[#0F172A] text-cyan-800 dark:text-cyan-300 border border-cyan-300 dark:border-cyan-500/40 hover:bg-cyan-100 dark:hover:bg-cyan-950/40 hover:border-cyan-500 shadow-sm dark:hover:shadow-[0_0_20px_rgba(6,182,212,0.25)] active:scale-[0.98]",

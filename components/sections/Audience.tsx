@@ -28,7 +28,7 @@ export function Audience() {
             return (
               <div
                 key={item.title}
-                className="relative rounded-3xl bg-white dark:bg-[#0F172A]/70 border border-slate-200 dark:border-slate-800 p-8 flex flex-col justify-between hover:border-cyan-500/50 hover:bg-slate-50/50 dark:hover:bg-[#121B33]/80 transition-all duration-300 group shadow-sm hover:shadow-xl"
+                className="glow-card relative rounded-3xl bg-white/95 dark:bg-[#0F172A]/80 border border-slate-200/90 dark:border-slate-800/90 p-8 flex flex-col justify-between hover:border-cyan-500/60 dark:hover:border-cyan-500/40 hover:bg-slate-50/70 dark:hover:bg-[#121B33]/90 transition-all duration-300 group shadow-sm hover:shadow-xl backdrop-blur-sm"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">

@@ -22,6 +22,7 @@ export function Contact() {
   const availableNeeds = [
     "Páginas Web & eCommerce",
     "Software a la Medida",
+    "Plataformas de Datos & Open Data",
     "Mantenimiento & Bugs",
     "Nube & VPS",
     "Servidores & DNS",
@@ -281,10 +282,6 @@ export function Contact() {
                   >
                     Enviar Mensaje Directo
                   </Button>
-
-                  <span className="text-xs font-mono text-slate-500 dark:text-slate-400 text-center sm:text-right">
-                    Conexión directa con ingenieros.
-                  </span>
                 </div>
 
                 {submitted && (

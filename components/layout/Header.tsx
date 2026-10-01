@@ -25,6 +25,7 @@ export function Header({ onOpenBriefing }: HeaderProps) {
 
   const navLinks = [
     { name: "Servicios", href: "#servicios" },
+    { name: "Plataformas", href: "#plataformas" },
     { name: "Metodología", href: "#metodologia" },
     { name: "Sectores", href: "#sectores" },
     { name: "Nosotros", href: "#nosotros" },

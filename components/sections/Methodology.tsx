@@ -30,7 +30,7 @@ export function Methodology() {
             return (
               <div
                 key={step.num}
-                className="relative rounded-2xl bg-white dark:bg-gradient-to-b dark:from-[#0F172A] dark:to-[#0A1020] border border-slate-200 dark:border-slate-800 p-7 flex flex-col justify-between hover:border-cyan-500/50 hover:shadow-[0_10px_30px_rgba(6,182,212,0.12)] dark:hover:shadow-[0_10px_30px_rgba(6,182,212,0.15)] shadow-sm transition-all duration-300 group"
+                className="glow-card relative rounded-2xl bg-white dark:bg-gradient-to-b dark:from-[#0F172A] dark:to-[#0A1020] border border-slate-200 dark:border-slate-800 p-7 flex flex-col justify-between hover:border-cyan-500/50 hover:shadow-[0_10px_30px_rgba(6,182,212,0.12)] dark:hover:shadow-[0_10px_30px_rgba(6,182,212,0.15)] shadow-sm transition-all duration-300 group"
               >
                 {/* Step indicator top */}
                 <div>

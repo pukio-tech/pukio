@@ -36,6 +36,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a href="#plataformas" className="text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                  Plataformas
+                </a>
+              </li>
+              <li>
                 <a href="#metodologia" className="text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
                   Metodología
                 </a>
@@ -74,6 +79,17 @@ export function Footer() {
                   </a>
                 </li>
               ))}
+              <li className="pt-2 border-t border-slate-200 dark:border-slate-800/80">
+                <a
+                  href="http://opendata.pukio.lat/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan-700 dark:text-cyan-400 hover:underline transition-colors flex items-center gap-1.5 font-medium"
+                >
+                  <span>OpenData Perú</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+              </li>
             </ul>
           </div>
 

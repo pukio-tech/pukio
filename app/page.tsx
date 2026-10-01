@@ -6,6 +6,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Stats } from "@/components/sections/Stats";
 import { WaveDivider } from "@/components/ui/WaveDivider";
 import { Services } from "@/components/sections/Services";
+import { Platforms } from "@/components/sections/Platforms";
 import { Marquee } from "@/components/sections/Marquee";
 import { Methodology } from "@/components/sections/Methodology";
 import { Audience } from "@/components/sections/Audience";
@@ -51,6 +52,13 @@ export default function Home() {
         <Services
           onSelectServiceForBriefing={(serviceTitle) =>
             handleOpenBriefing(serviceTitle)
+          }
+        />
+
+        {/* Ecosistema & Plataformas Propias (OpenData Perú) */}
+        <Platforms
+          onOpenBriefing={(serviceName) =>
+            handleOpenBriefing(serviceName)
           }
         />
 

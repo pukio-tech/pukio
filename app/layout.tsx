@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { siteConfig } from "@/data/siteConfig";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
@@ -22,6 +23,11 @@ export const metadata: Metadata = {
   keywords: [
     "Pukio Tech",
     "Pukio",
+    "OpenData Perú",
+    "datos abiertos Perú",
+    "recursos turísticos Perú",
+    "consulta RUC SUNAT",
+    "directorio empresarial Perú",
     "desarrollo de software Chiclayo",
     "ingeniería de software Perú",
     "páginas web Chiclayo",
@@ -38,6 +44,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     type: "website",
@@ -46,11 +59,20 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — ${siteConfig.slogan}`,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+        alt: `${siteConfig.name} Logo`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — ${siteConfig.slogan}`,
     description: siteConfig.description,
+    images: ["/logo.png"],
   },
   icons: {
     icon: [
@@ -62,6 +84,9 @@ export const metadata: Metadata = {
     apple: [
       { url: "/logo.png", sizes: "180x180", type: "image/png" },
     ],
+  },
+  verification: {
+    google: "p6mJLAtgJyRplQaeGVNm8Kc0TPdawAI3oP3KbWFgfss",
   },
   other: {
     "google-adsense-account": "ca-pub-5824072777833469",
@@ -95,6 +120,8 @@ export default function RootLayout({
           "Desarrollo de Software",
           "Desarrollo Web",
           "eCommerce",
+          "Plataformas de Datos Abiertos",
+          "Open Data Perú",
           "Infraestructura Cloud y VPS",
           "Servidores Linux y DNS",
           "Mantenimiento y Reparación de Software",
@@ -151,6 +178,20 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/logo.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
+        {/* Google Analytics (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-N18722LR07"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-N18722LR07');
+          `}
+        </Script>
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5824072777833469"

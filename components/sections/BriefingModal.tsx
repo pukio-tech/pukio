@@ -32,6 +32,7 @@ export function BriefingModal({
   const servicesList = [
     "Páginas Web y Tiendas Online",
     "Software a la Medida",
+    "Plataformas de Datos & Open Data",
     "Mantenimiento y Reparación de Bugs",
     "Nube y VPS",
     "Servidores y DNS",

@@ -27,6 +27,20 @@ export interface AudienceItem {
   highlight: string;
 }
 
+export interface PlatformItem {
+  id: string;
+  name: string;
+  tagline: string;
+  url: string;
+  badge: string;
+  description: string;
+  fullDescription: string;
+  stats: { label: string; value: string; sub: string }[];
+  features: string[];
+  technologies: string[];
+  externalUrlText: string;
+}
+
 export const siteConfig = {
   name: "Pukio Tech",
   shortName: "Pukio",
@@ -166,6 +180,34 @@ export const siteConfig = {
         },
       ],
       technologies: ["Nginx", "Apache", "Cloudflare DNS", "Let's Encrypt", "SPF / DKIM / DMARC", "Bash Scripting"],
+    },
+  ],
+
+  platforms: [
+    {
+      id: "opendata-peru",
+      name: "OpenData Perú",
+      tagline: "Datos Abiertos de Turismo y Empresas del Perú",
+      url: "http://opendata.pukio.lat/",
+      badge: "Plataforma en Vivo · Pukio Labs",
+      description:
+        "Portal de datos abiertos para la consulta, geolocalización y análisis de recursos turísticos y directorio empresarial en los 25 departamentos del Perú.",
+      fullDescription:
+        "Desarrollada y mantenida por Pukio Tech, OpenData Perú centraliza fichas técnicas oficiales, coordenadas geográficas, inventarios turísticos del MINCETUR y datos corporativos con consulta RUC en una interfaz interactiva de alta velocidad, optimizada para empresas, investigadores y ciudadanos.",
+      stats: [
+        { value: "25", label: "Departamentos", sub: "Cobertura nacional completa" },
+        { value: "100%", label: "Datos Abiertos", sub: "Acceso libre y público" },
+        { value: "Miles", label: "Recursos Turísticos", sub: "Fichas técnicas y mapas" },
+        { value: "RUC & Mapas", label: "Consultas Directas", sub: "Georreferenciación oficial" },
+      ],
+      features: [
+        "Mapas interactivos con georreferenciación de recursos turísticos del Perú",
+        "Fichas técnicas estandarizadas con información oficial de los 25 departamentos",
+        "Directorio empresarial y consulta de datos comerciales y tributarios",
+        "Arquitectura de alto rendimiento con carga instantánea y visualización en tiempo real",
+      ],
+      technologies: ["Next.js", "React", "Georreferenciación", "Open Data", "REST APIs", "TailwindCSS"],
+      externalUrlText: "Explorar opendata.pukio.lat",
     },
   ],
 
